@@ -19,6 +19,36 @@
         <button v-on:click="age--">Decrease Age</button>
         <button @click="title = 'ong bak' ">Change Title</button>
         <button @click="resetTitle">Reset Title</button>
+        <br></br>
+        <input type="text" v-model="inputValue" placeholder="Insert New Title">
+        <button @click="changeTitleThroughParam(inputValue)">Change Title</button>
+        <br></br>
+        <!-- you can also do it like this <div v-if="5 > 10"> -->
+        <div v-if="condition">
+            <p>Condition True</p>
+        </div>
+        <div v-else>
+            <p>Condition False</p>
+        </div>
+        <br></br>
+        <ul v-if="condition">
+            <h1>Books</h1>
+            <li v-for="book in books">
+                <h3>{{book.title}}</h3>
+                <p>{{book.author}}</p>
+                <p>Is Favorite: {{book.isFave}}</p>
+            </li>
+        </ul>        
+        <br></br>
+        <ul v-if="condition">
+            <h1>Filtered Books</h1>
+            <!-- <h2>{{filteredBooks}}</h2> -->
+            <li v-for="book in filteredBooks">
+                <h3>{{book.title}}</h3>
+                <p>{{book.author}}</p>
+                <p>Is Favorite: {{book.isFave}}</p>
+            </li>
+        </ul>        
     </div>
 
 </body>
