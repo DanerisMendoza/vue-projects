@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://unpkg.com/vue@3.0.2"></script>
+</head>
+<body>
+    
+    <div id="app">
+        <h1>Title is: {{title}}</h1>
+        <h2>Author is: {{author}} Age is: {{age}}</h1>  
+        <!-- note curly braces is only need when outputing value -->
+        <button v-on:click="age++">Increase Age</button>
+        <button @click="age++">Increase Age Different Method</button>
+        <button v-on:click="age--">Decrease Age</button>
+        <button @click="title = 'ong bak' ">Change Title</button>
+        <button @click="resetTitle">Reset Title</button>
+    </div>
+
+</body>
+</html>
+
+<script src='app.js'></script>
